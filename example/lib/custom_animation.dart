@@ -1,5 +1,5 @@
+import 'package:example/easy_loading/src/animations/animation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class CustomAnimation extends EasyLoadingAnimation {
   CustomAnimation();

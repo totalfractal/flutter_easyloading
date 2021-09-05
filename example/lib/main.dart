@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:example/easy_loading/src/easy_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import './custom_animation.dart';
 
@@ -17,7 +17,7 @@ void configLoading() {
   EasyLoading.instance
     ..displayDuration = const Duration(milliseconds: 2000)
     ..indicatorType = EasyLoadingIndicatorType.fadingCircle
-    ..loadingStyle = EasyLoadingStyle.dark
+    ..loadingStyle = EasyLoadingStyle.custom
     ..indicatorSize = 45.0
     ..radius = 10.0
     ..progressColor = Colors.yellow
@@ -26,8 +26,10 @@ void configLoading() {
     ..textColor = Colors.yellow
     ..maskColor = Colors.blue.withOpacity(0.5)
     ..userInteractions = true
-    ..dismissOnTap = false
-    ..customAnimation = CustomAnimation();
+    ..isTransparent = true
+    ..dismissOnTap = false;
+
+  //..customAnimation = CustomAnimation();
 }
 
 class MyApp extends StatelessWidget {
@@ -41,7 +43,6 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'Flutter EasyLoading'),
       builder: EasyLoading.init(),
-      ),
     );
   }
 }

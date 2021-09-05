@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:example/easy_loading/src/easy_loading.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class TestPage extends StatefulWidget {
   @override
